@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="elencoVideogiochi.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+
+
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 5px solid rgb(61, 61, 61);
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(250, 250, 250);
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(172, 172, 172);
+      }
+
+      margin-button{
+        margin-top: 32px !important;
+      }
+
+    </style>
+  </head>
+  <body
+    class="container-fluid"
+    style="width: 800px; background-color: rgb(61, 61, 61); color: white"
+  >
+    <h1>Questi sono i tuoi videogiochi preferiti:</h1>
+    <h3>Inserisci un videogioco nell'elenco</h3>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form id="formNuovoVideogioco">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3">
+                  <label for="titolo">Titolo</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Fortnite"
+                    name="titolo"
+                    id="titolo"
+                    required
+                  />
+                </div>
+                <div class="col-3">
+                  <label for="genere">Genere</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="FPS"
+                    name="genere"
+                    id="genere"
+                    required
+                  />
+                </div>
+                <div class="col-3">
+                  <label for="data_rilascio">Data di Rilascio</label>
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="data_rilascio"
+                    id="data_rilascio"
+                    required
+                  />
+                </div>
+              <!-- </div>
+              <div class="row"> -->
+                <div class="col-3">
+                  <button class="form-control" type="submit" style="margin-top: 32px;">Inserisci</button>
+                </div>
+              </div>
+              <br />
+            </div>
+          </form>
+          <table id="tabella" style="color: black">
+            <thead>
+              <th>Titolo</th>
+              <th>Genere</th>
+              <th>Data di Rilascio</th>
+            </thead>
+          </table>
+          <form id="formIndietro">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4">
+                  <button class="form-control" type="submit" style="margin-top: 15px;">Indietro</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

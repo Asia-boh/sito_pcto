@@ -1,0 +1,191 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prova Registrazione</title>
+    <!-- action="/asia.php" method="post" -->
+  </head>
+  <body
+    class="container-fluid"
+    style="width: 800px; background-color: rgb(61, 61, 61); color: white"
+  >
+    <br />
+    <h1>Regisrtazione Utente</h1>
+    <br /><br />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form id="formUser">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4">
+                  <label for="email">Email</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="mario.rossi@gmail.com"
+                    name="email"
+                    id="email"
+                    pattern="\w+@\w+\.\w{2,4}"
+                    required
+                  /><br />
+                </div>
+              <!-- </div>
+              <div class="row"> -->
+                <div class="col-4">
+                  <label for="username">Username</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Rainbow98"
+                    name="username"
+                    id="username"
+                    minlength="3"
+                    pattern="\w*"
+                    required
+                  /><br />
+                </div>
+                </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="password">Password</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="g#*1$5aSaQE/!"
+                    name="password"
+                    id="password"
+                    minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*"
+                    required
+                  /><br />
+                </div>
+              <!-- </div>
+              <div class="row"> -->
+                <div class="col-4">
+                  <label for="confirm_password">Conferma la password</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="g#*1$5aSaQE/!"
+                    name="confirm_password"
+                    id="confirm_password"
+                    required
+                  /><br />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="nome">Nome</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Mario"
+                    name="nome"
+                    id="nome"
+                    required
+                  /><br />
+                </div>
+                <!-- </div>
+              <div class="row"> -->
+                <div class="col-4">
+                  <label for="cognome">Cognome</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Rossi"
+                    name="cognome"
+                    id="cognome"
+                    required
+                  /><br />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <label for="sesso">Sesso</label>
+                  <select class="form-control" name="sesso" id="sesso" required>
+                    <option value="M">Maschio</option>
+                    <option value="F">Femmina</option></select
+                  ><br />
+                </div>
+              <!-- </div>
+              <div class="row"> -->
+                <div class="col-4">
+                  <label for="data_nascita">Data di nascita</label>
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="data_nascita"
+                    id="data_nascita"
+                    required
+                  /><br />
+                </div>
+                <!-- </div>
+              <div class="row"> -->
+                <div class="col-4">
+                  <label for="codice_fiscale">Codice fiscale</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="RSSMRA80A01H501U"
+                    name="codice_fiscale"
+                    id="codice_fiscale"
+                    size="16"
+                    pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$"
+                    required
+                  /><br />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <button class="form-control" type="submit">Registrati</button>
+                </div>
+              </div>
+              <br />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form id="formLogin">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4">
+                  <p>Hai già un account?</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <button class="form-control" type="submit">
+                    Effettua il Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <p>Elenco Registrati:</p> -->
+    <!-- <ul id="listaUsers"></ul> -->
+    <p id="messaggio_errore"></p>
+  </body>
+  <script src="registrazione.js"></script>
+</html>
